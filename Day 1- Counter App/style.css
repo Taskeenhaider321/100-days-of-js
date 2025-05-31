@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.counter__section {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.counter__card {
+    width: 100%;
+    max-width: 400px;
+    background-color: aqua;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.counter__card--screen {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    padding: 160px 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 6em;
+}
+
+
+.counter__card--button {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.counter__card--btn {
+    padding: 30px;
+    border-radius: 5px;
+    background-color: aquamarine;
+    font-size: x-large;
+    border: none;
+}
