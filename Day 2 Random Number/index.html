@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Random Number Generator</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">🎲 Random Generator</h1>
+      <p class="subtitle">
+        Generate random numbers within your specified range
+      </p>
+
+      <div class="form-group">
+        <div class="input-row">
+          <div class="input-group">
+            <label for="minValue">Minimum Value</label>
+            <input
+              type="number"
+              id="minValue"
+              value="1"
+              min="0"
+              placeholder="Enter min value"
+            />
+          </div>
+          <div class="input-group">
+            <label for="maxValue">Maximum Value</label>
+            <input
+              type="number"
+              id="maxValue"
+              value="100"
+              min="1"
+              placeholder="Enter max value"
+            />
+          </div>
+        </div>
+
+        <button
+          class="generate-btn"
+          id="generateBtn"
+          onclick="generateNumber()"
+        >
+          🎯 Generate Random Number
+        </button>
+
+        <div id="error" class="error" style="display: none"></div>
+      </div>
+
+      <div class="result-container" id="resultContainer">
+        <div class="result-label">Your Random Number</div>
+        <div class="result-number" id="resultNumber">?</div>
+        <div class="result-range" id="resultRange">Click generate to start</div>
+      </div>
+
+      <div class="history" id="historySection" style="display: none">
+        <div class="history-title">
+          📊 Recent Numbers
+          <button class="clear-history" onclick="clearHistory()">Clear</button>
+        </div>
+        <div class="history-list" id="historyList"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

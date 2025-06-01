@@ -7,16 +7,43 @@
     <title>Counter App</title>
   </head>
   <body>
-    <main class="counter__section">
-      <section class="counter__card">
-        <div id="result-screen" class="counter__card--screen">2</div>
-        <div class="counter__card--button">
-          <button id="plus-btn" class="counter__card--btn">+</button>
-          <button id="reset-btn" class="counter__card--btn">reset</button>
-          <button id="minus-btn" class="counter__card--btn">-</button>
+    <div class="counter-container">
+      <h1>Advanced Counter</h1>
+
+      <div class="counter-display" id="counterDisplay">0</div>
+
+      <div class="controls">
+        <button class="btn btn-danger" id="decrementBtn">- Decrease</button>
+        <button class="btn btn-success" id="resetBtn">Reset</button>
+        <button class="btn btn-primary" id="incrementBtn">+ Increase</button>
+      </div>
+
+      <div class="settings">
+        <div class="setting-group">
+          <label for="stepSize">Step Size:</label>
+          <input type="number" id="stepSize" value="1" min="1" max="100" />
         </div>
-      </section>
-    </main>
+        <div class="setting-group">
+          <label for="minValue">Min Value:</label>
+          <input type="number" id="minValue" value="-100" />
+        </div>
+        <div class="setting-group">
+          <label for="maxValue">Max Value:</label>
+          <input type="number" id="maxValue" value="100" />
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat-item">
+          <span>Total Clicks</span>
+          <span class="stat-value" id="totalClicks">0</span>
+        </div>
+        <div class="stat-item">
+          <span>Session High</span>
+          <span class="stat-value" id="sessionHigh">0</span>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
