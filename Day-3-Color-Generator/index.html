@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎨 Advanced Color Generator</h1>
+
+      <div class="color-display" id="colorDisplay">Click to copy color!</div>
+
+      <div class="color-info" id="colorInfo">
+        <div class="color-value" data-format="hex">
+          <div class="color-label">HEX</div>
+          <div class="color-code" id="hexValue">#000000</div>
+        </div>
+        <div class="color-value" data-format="rgb">
+          <div class="color-label">RGB</div>
+          <div class="color-code" id="rgbValue">rgb(0, 0, 0)</div>
+        </div>
+        <div class="color-value" data-format="hsl">
+          <div class="color-label">HSL</div>
+          <div class="color-code" id="hslValue">hsl(0, 0%, 0%)</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-primary" id="generateBtn">
+          🎲 Generate Color
+        </button>
+        <button class="btn btn-secondary" id="paletteBtn">
+          🎨 Generate Palette
+        </button>
+        <button class="btn btn-secondary" id="clearBtn">
+          🗑️ Clear History
+        </button>
+      </div>
+
+      <div class="section-title">Color Palette</div>
+      <div class="palette" id="palette"></div>
+
+      <div class="section-title">Recent Colors</div>
+      <div class="history" id="history"></div>
+    </div>
+
+    <div class="notification" id="notification">Color copied to clipboard!</div>
+    <script src="script.js"></script>
+  </body>
+</html>
