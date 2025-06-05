@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Vowel Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Advanced Vowel Counter</h1>
+            <p>Analyze vowel distribution in your text</p>
+        </header>
+
+        <div class="input-section">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="text">Text Input</button>
+                <button class="tab-btn" data-tab="file">File Upload</button>
+            </div>
+            
+            <div class="tab-content active" id="text-tab">
+                <textarea id="text-input" placeholder="Enter your text here..."></textarea>
+            </div>
+            
+            <div class="tab-content" id="file-tab">
+                <div class="file-upload">
+                    <label for="file-input" class="file-label">
+                        <span>Choose a text file</span>
+                        <input type="file" id="file-input" accept=".txt">
+                    </label>
+                    <p id="file-name">No file selected</p>
+                </div>
+                <div id="file-content-preview"></div>
+            </div>
+            
+            <div class="options">
+                <label class="toggle">
+                    <input type="checkbox" id="case-sensitive">
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">Case Sensitive</span>
+                </label>
+                <label class="toggle">
+                    <input type="checkbox" id="count-y" checked>
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">Count 'Y' as vowel</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <div class="stats">
+                <div class="stat-card total">
+                    <h3>Total Vowels</h3>
+                    <div class="stat-value" id="total-vowels">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Characters</h3>
+                    <div class="stat-value" id="total-chars">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Vowel Percentage</h3>
+                    <div class="stat-value" id="vowel-percentage">0%</div>
+                </div>
+            </div>
+
+            <div class="vowel-breakdown">
+                <h3>Vowel Breakdown</h3>
+                <div class="vowel-bars">
+                    <div class="vowel-bar">
+                        <div class="vowel-label">A</div>
+                        <div class="bar-container">
+                            <div class="bar" id="bar-a" style="width: 0%"></div>
+                        </div>
+                        <div class="vowel-count" id="count-a">0</div>
+                    </div>
+                    <div class="vowel-bar">
+                        <div class="vowel-label">E</div>
+                        <div class="bar-container">
+                            <div class="bar" id="bar-e" style="width: 0%"></div>
+                        </div>
+                        <div class="vowel-count" id="count-e">0</div>
+                    </div>
+                    <div class="vowel-bar">
+                        <div class="vowel-label">I</div>
+                        <div class="bar-container">
+                            <div class="bar" id="bar-i" style="width: 0%"></div>
+                        </div>
+                        <div class="vowel-count" id="count-i">0</div>
+                    </div>
+                    <div class="vowel-bar">
+                        <div class="vowel-label">O</div>
+                        <div class="bar-container">
+                            <div class="bar" id="bar-o" style="width: 0%"></div>
+                        </div>
+                        <div class="vowel-count" id="count-o">0</div>
+                    </div>
+                    <div class="vowel-bar">
+                        <div class="vowel-label">U</div>
+                        <div class="bar-container">
+                            <div class="bar" id="bar-u" style="width: 0%"></div>
+                        </div>
+                        <div class="vowel-count" id="count-u">0</div>
+                    </div>
+                    <div class="vowel-bar" id="y-bar">
+                        <div class="vowel-label">Y</div>
+                        <div class="bar-container">
+                            <div class="bar" id="bar-y" style="width: 0%"></div>
+                        </div>
+                        <div class="vowel-count" id="count-y-value">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h3>Analysis History</h3>
+            <div class="history-list" id="history-list">
+                <!-- History items will be added here -->
+            </div>
+            <button id="clear-history" class="btn">Clear History</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Advanced Vowel Counter | Created with HTML, CSS & JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

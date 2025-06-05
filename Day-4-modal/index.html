@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Modal</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Advanced Modal System</h1>
+
+      <div class="modal-triggers">
+        <button class="trigger-btn" onclick="openModal('basicModal')">
+          Basic Modal
+        </button>
+        <button class="trigger-btn" onclick="openModal('successModal')">
+          Success Modal
+        </button>
+        <button class="trigger-btn" onclick="openModal('warningModal')">
+          Warning Modal
+        </button>
+        <button class="trigger-btn" onclick="openModal('errorModal')">
+          Error Modal
+        </button>
+        <button class="trigger-btn" onclick="openModal('formModal')">
+          Form Modal
+        </button>
+        <button class="trigger-btn" onclick="openModal('imageModal')">
+          Image Modal
+        </button>
+        <button class="trigger-btn" onclick="openModal('confirmModal')">
+          Confirmation Modal
+        </button>
+        <button class="trigger-btn" onclick="openModal('loadingModal')">
+          Loading Modal
+        </button>
+      </div>
+    </div>
+
+    <!-- Basic Modal -->
+    <div id="basicModal" class="modal-overlay">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 class="modal-title">Basic Modal</h2>
+          <button class="close-btn" onclick="closeModal('basicModal')">
+            &times;
+          </button>
+        </div>
+        <div class="modal-content">
+          <p>
+            This is a basic modal with a clean and modern design. It features
+            smooth animations, backdrop blur effects, and responsive design that
+            works perfectly on all devices.
+          </p>
+          <p>
+            The modal system is built with vanilla HTML, CSS, and JavaScript for
+            maximum compatibility and performance.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal-overlay">
+      <div class="modal success">
+        <div class="modal-header">
+          <h2 class="modal-title">Success!</h2>
+          <button class="close-btn" onclick="closeModal('successModal')">
+            &times;
+          </button>
+        </div>
+        <div class="modal-content">
+          <div class="success-icon">✓</div>
+          <p>
+            Your action has been completed successfully! This success modal
+            provides clear visual feedback with its green color scheme and
+            checkmark icon.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Warning Modal -->
+    <div id="warningModal" class="modal-overlay">
+      <div class="modal warning">
+        <div class="modal-header">
+          <h2 class="modal-title">Warning</h2>
+          <button class="close-btn" onclick="closeModal('warningModal')">
+            &times;
+          </button>
+        </div>
+        <div class="modal-content">
+          <div class="warning-icon">⚠</div>
+          <p>
+            Please be aware that this action may have consequences. This warning
+            modal uses an orange color scheme to grab attention and alert users
+            to important information.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="errorModal" class="modal-overlay">
+      <div class="modal error">
+        <div class="modal-header">
+          <h2 class="modal-title">Error Occurred</h2>
+          <button class="close-btn" onclick="closeModal('errorModal')">
+            &times;
+          </button>
+        </div>
+        <div class="modal-content">
+          <div class="error-icon">✕</div>
+          <p>
+            An error has occurred while processing your request. This error
+            modal uses a red color scheme to clearly indicate that something
+            went wrong and requires attention.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Modal -->
+    <div id="formModal" class="modal-overlay">
+      <div class="modal form">
+        <div class="modal-header">
+          <h2 class="modal-title">Contact Form</h2>
+          <button class="close-btn" onclick="closeModal('formModal')">
+            &times;
+          </button>
+        </div>
+        <div class="modal-content">
+          <form>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="">Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Support</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Enter your message"
+              ></textarea>
+            </div>
+            <div class="form-actions">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="closeModal('formModal')"
+              >
+                Cancel
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal-overlay">
+      <div class="modal image">
+        <div class="modal-header">
+          <h2 class="modal-title">Image Gallery</h2>
+          <button class="close-btn" onclick="closeModal('imageModal')">
+            &times;
+          </button>
+        </div>
+        <div class="modal-content">
+          <div class="image-container">
+            <img
+              src="/placeholder.svg?height=400&width=600"
+              alt="Sample Image"
+              class="modal-image"
+            />
+            <p style="margin-top: 1rem; color: #666">
+              This is a sample image modal that can display high-quality images
+              with proper scaling and responsive design.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmModal" class="modal-overlay">
+      <div class="modal confirmation">
+        <div class="modal-header">
+          <h2 class="modal-title">Confirm Action</h2>
+          <button class="close-btn" onclick="closeModal('confirmModal')">
+            &times;
+          </button>
+        </div>
+        <div class="modal-content">
+          <div class="confirmation-icon">?</div>
+          <p>
+            Are you sure you want to proceed with this action? This confirmation
+            modal helps prevent accidental actions by requiring explicit user
+            confirmation.
+          </p>
+          <div class="confirmation-actions">
+            <button
+              class="btn btn-secondary"
+              onclick="closeModal('confirmModal')"
+            >
+              Cancel
+            </button>
+            <button class="btn btn-danger" onclick="confirmAction()">
+              Yes, Proceed
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading Modal -->
+    <div id="loadingModal" class="modal-overlay">
+      <div class="modal loading">
+        <div class="modal-content">
+          <div class="loading-spinner"></div>
+          <h3>Processing...</h3>
+          <p>
+            Please wait while we process your request. This loading modal
+            provides visual feedback during asynchronous operations.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
