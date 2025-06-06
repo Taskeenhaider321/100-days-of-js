@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="home" class="flex-center flex-column">
+        <h1>Advanced Quiz</h1>
+        <button id="start-btn" class="btn">Start Quiz App</button>
+        <button id="highscores-btn" class="btn">High Scores</button>
+      </div>
+
+      <div id="quiz" class="hide">
+        <div id="hud">
+          <div class="hud-item">
+            <p id="progressText" class="hud-prefix">Question</p>
+            <div id="progress-bar">
+              <div id="progress-bar-full"></div>
+            </div>
+          </div>
+          <div class="hud-item">
+            <p class="hud-prefix">Score</p>
+            <h1 class="hud-main-text" id="score">0</h1>
+          </div>
+          <div class="hud-item">
+            <p class="hud-prefix">Time</p>
+            <h1 class="hud-main-text" id="timer">30</h1>
+          </div>
+        </div>
+        <h2 id="question">What is the answer to this question?</h2>
+        <div id="answer-buttons" class="btn-grid">
+          <button class="btn answer-btn">Answer 1</button>
+          <button class="btn answer-btn">Answer 2</button>
+          <button class="btn answer-btn">Answer 3</button>
+          <button class="btn answer-btn">Answer 4</button>
+        </div>
+      </div>
+
+      <div id="end" class="flex-center flex-column hide">
+        <h1>Quiz Completed!</h1>
+        <h2>Your Score: <span id="final-score">0</span></h2>
+        <form id="username-form" class="flex-center flex-column">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your name"
+            required
+          />
+          <button type="submit" class="btn" id="save-score-btn">
+            Save Score
+          </button>
+        </form>
+        <button id="play-again-btn" class="btn">Play Again</button>
+        <button id="go-home-btn" class="btn">Go Home</button>
+      </div>
+
+      <div id="highscores" class="flex-center flex-column hide">
+        <h1>High Scores</h1>
+        <ul id="highscores-list"></ul>
+        <button id="clear-highscores-btn" class="btn">Clear High Scores</button>
+        <button id="return-home-btn" class="btn">Home</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
