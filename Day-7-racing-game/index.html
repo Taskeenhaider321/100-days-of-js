@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shape Racing Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1 class="game-title">🏁 Shape Racing Championship 🏁</h1>
+
+      <div class="global-controls">
+        <button class="btn btn-global btn-reset" onclick="resetRace()">
+          🔄 Reset Race
+        </button>
+        <button class="btn btn-global btn-start" onclick="startAllShapes()">
+          🚀 Start All
+        </button>
+        <button class="btn btn-global btn-stop" onclick="stopAllShapes()">
+          ⏹️ Stop All
+        </button>
+      </div>
+
+      <div class="race-track">
+        <div class="track-line">
+          <div class="shape circle" id="circle"></div>
+          <div class="finish-line"></div>
+        </div>
+        <div class="track-line">
+          <div class="shape square" id="square"></div>
+          <div class="finish-line"></div>
+        </div>
+        <div class="track-line">
+          <div class="shape triangle" id="triangle"></div>
+          <div class="finish-line"></div>
+        </div>
+        <div class="track-line">
+          <div class="shape diamond" id="diamond"></div>
+          <div class="finish-line"></div>
+        </div>
+      </div>
+
+      <div class="controls-container">
+        <div class="shape-control">
+          <div class="control-header">
+            <div class="control-shape circle"></div>
+            <span class="control-title">Red Circle</span>
+          </div>
+          <div class="speed-control">
+            <label class="speed-label">Speed Control</label>
+            <div class="speed-value" id="circle-speed-value">50</div>
+            <input
+              type="range"
+              class="speed-slider"
+              id="circle-speed"
+              min="10"
+              max="100"
+              value="50"
+            />
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="circle-progress"></div>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-start" onclick="startShape('circle')">
+              ▶️ Start
+            </button>
+            <button class="btn btn-stop" onclick="stopShape('circle')">
+              ⏹️ Stop
+            </button>
+          </div>
+        </div>
+
+        <div class="shape-control">
+          <div class="control-header">
+            <div class="control-shape square"></div>
+            <span class="control-title">Teal Square</span>
+          </div>
+          <div class="speed-control">
+            <label class="speed-label">Speed Control</label>
+            <div class="speed-value" id="square-speed-value">50</div>
+            <input
+              type="range"
+              class="speed-slider"
+              id="square-speed"
+              min="10"
+              max="100"
+              value="50"
+            />
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="square-progress"></div>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-start" onclick="startShape('square')">
+              ▶️ Start
+            </button>
+            <button class="btn btn-stop" onclick="stopShape('square')">
+              ⏹️ Stop
+            </button>
+          </div>
+        </div>
+
+        <div class="shape-control">
+          <div class="control-header">
+            <div class="control-shape triangle"></div>
+            <span class="control-title">Yellow Triangle</span>
+          </div>
+          <div class="speed-control">
+            <label class="speed-label">Speed Control</label>
+            <div class="speed-value" id="triangle-speed-value">50</div>
+            <input
+              type="range"
+              class="speed-slider"
+              id="triangle-speed"
+              min="10"
+              max="100"
+              value="50"
+            />
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="triangle-progress"></div>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-start" onclick="startShape('triangle')">
+              ▶️ Start
+            </button>
+            <button class="btn btn-stop" onclick="stopShape('triangle')">
+              ⏹️ Stop
+            </button>
+          </div>
+        </div>
+
+        <div class="shape-control">
+          <div class="control-header">
+            <div class="control-shape diamond"></div>
+            <span class="control-title">Purple Diamond</span>
+          </div>
+          <div class="speed-control">
+            <label class="speed-label">Speed Control</label>
+            <div class="speed-value" id="diamond-speed-value">50</div>
+            <input
+              type="range"
+              class="speed-slider"
+              id="diamond-speed"
+              min="10"
+              max="100"
+              value="50"
+            />
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="diamond-progress"></div>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-start" onclick="startShape('diamond')">
+              ▶️ Start
+            </button>
+            <button class="btn btn-stop" onclick="stopShape('diamond')">
+              ⏹️ Stop
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="winner-announcement" id="winner-announcement"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
