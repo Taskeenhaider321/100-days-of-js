@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Editor</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Marked.js for Markdown parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Highlight.js for syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/vs2015.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Markdown Editor</h1>
+      <div class="actions">
+        <button id="save-btn" title="Save to Local Storage">Save</button>
+        <button id="copy-html-btn" title="Copy HTML">Copy HTML</button>
+        <button id="download-md-btn" title="Download Markdown">.md</button>
+        <button id="download-html-btn" title="Download HTML">.html</button>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <button data-action="bold" title="Bold"><strong>B</strong></button>
+      <button data-action="italic" title="Italic"><em>I</em></button>
+      <button data-action="heading1" title="Heading 1">H1</button>
+      <button data-action="heading2" title="Heading 2">H2</button>
+      <button data-action="unordered-list" title="Unordered List">• List</button>
+      <button data-action="ordered-list" title="Ordered List">1. List</button>
+      <button data-action="link" title="Link">🔗</button>
+      <button data-action="image" title="Image">🖼️</button>
+      <button data-action="code" title="Code Block">{ }</button>
+      <button data-action="table" title="Table">Table</button>
+      <button data-action="quote" title="Blockquote">❝</button>
+      <button data-action="hr" title="Horizontal Rule">―</button>
+    </div>
+
+    <div class="editor-container">
+      <div class="tabs">
+        <button class="tab active" data-tab="editor">Editor</button>
+        <button class="tab" data-tab="preview">Preview</button>
+      </div>
+      
+      <div class="panels">
+        <div class="panel editor-panel active">
+          <textarea id="editor" spellcheck="false"></textarea>
+        </div>
+        <div class="panel preview-panel">
+          <div id="preview" class="markdown-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">Message copied to clipboard</div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
